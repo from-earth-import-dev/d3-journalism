@@ -25,17 +25,7 @@ d3.csv("assets/data/data.csv").then(function(stateData) {
 		data.income = +data.income;
 		data.obesity = +data.obesity;
 	})
-
-	console.log(stateData); 
-
-	// var xScale = d3.scaleLinear()
-	// 	.domain([d3.extent(stateData, d => d.income)])
-	// 	.range([0, chartWidth]);
 	
-	// var yScale = d3.scaleLinear()
-	// 	.domain([d3.extent(stateData, d => d.obesity)])
-	// 	.range([chartHeight, 0]);
-
 	var xScale = d3.scaleLinear()
 		.domain(d3.extent(stateData, d => d.income))
 		.range([0, chartWidth]);
